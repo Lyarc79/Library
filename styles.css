@@ -1,0 +1,273 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+    --gray50: #f9fafb;
+    --gray100: #f3f4f6;
+    --gray200: #e5e7eb;
+    --gray300: #d1d5db;
+    --gray400: #9ca3af;
+    --gray500: #6b7280;
+    --gray600: #4b5563;
+    --gray700: #374151;
+    --gray800: #1f2937;
+    --gray900: #111827;
+    --shadow: rgba(0, 0, 0, 0.45) 5px 5px 10px;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Archivo', sans-serif;
+    background-color: var(--gray200);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.header{
+    background-color: var(--gray900);
+}
+
+.header .container{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1{
+    font-size: 36px;
+    color: white;
+}
+
+.loginBtn{
+    padding: 12px 18px;
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: var(--gray100);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.loginBtn:hover{
+    background-color: var(--gray400);
+}
+
+.bookChoosing{
+    margin-bottom: 20px;
+}
+
+.bookDisplay{
+    width: 1200px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 30px;
+    padding: 20px;
+    padding-bottom: 100px;
+}
+
+.newBook{
+    font-size: 26px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: var(--gray200);
+}
+
+.newBook:hover{
+    background-color: var(--gray300);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.bookChoosing dialog{
+    border-radius: 10px;
+    border: none;
+    background-color: var(--gray200);
+}
+
+.bookChoosing dialog::backdrop{
+    background-color:rgba(0, 0, 0, 0.562);
+}
+
+.addBookForm{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.addBookForm h2{
+    margin: 0;
+    font-size: 22px;
+    padding: 5px;
+}
+
+.addBookForm input{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+}
+
+.bookChoosing dialog .checkbox{
+    width: 30px;
+}
+
+.bookChoosing dialog .submitModal{
+    padding: 12px;
+    background-color: var(--gray600);
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bookChoosing dialog .submitModal:hover{
+    background-color: var(--gray400);
+    color: black;
+    font-weight: bold;
+}
+
+.book-card{
+    min-height: 200px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 30px;
+    text-align: center;
+    background-color: lightpink;
+    gap: 12px;
+    position: relative;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.book-property{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.bookTitle{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.removeBtn{
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 6px 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.removeBtn:hover{
+    transform: scale(1.2);
+}
+
+.removeBtn svg{
+    width: 20px;
+    height: auto;
+    fill: var(--gray800);
+    vertical-align: middle;
+}
+
+.toggleRead{
+    padding: 15px;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    border-radius: 10px;
+    background-color: var(--gray200);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.toggleRead:hover{
+    background-color: var(--gray600);
+    color: white;
+}
+
+.readStatus{
+    background-color: var(--gray900);
+    color:white;
+}
+
+.notReadStatus{
+    background-color: var(--gray400);
+    color: var(--gray900);
+}
+
+.checkbox{
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+
+.isRead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer{
+    text-align: center;
+    padding-bottom: 5px;
+    color: var(--gray900);
+    font-size: 18px;
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--gray200);
+    width: 100vw;
+}
+
+#github-logo{
+    color: var(--gray900);
+    font-size: 24px;
+    margin-right: 10px;
+    margin-left: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+#github-logo:hover{
+    transform: scale(1.1) rotate(360deg);
+    transition: transform 0.3s ease-in-out;
+}
+

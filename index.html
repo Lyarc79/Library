@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library App</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/967516047d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header container">
+            <h1>MyLibrary</h1>
+            <button class="loginBtn">Log in</button>
+        </div>
+    </header>
+    <div class="wrapper container">
+        <div class="bookChoosing">
+            <button class="newBook" id="newBook">+ Add Book</button>
+            <dialog id="modal">
+                <form class="addBookForm" id="addBookForm">
+                    <h2>Add new book</h2>
+                    <input class="input" type="text" id="title" placeholder="Title" required>
+                    <input class="input" type="text" id="author" placeholder="Author" required>
+                    <input class="input" type="number" id="pages" placeholder="Pages" required>
+                    <div class="isRead">
+                        <label for="isRead">Did you read it?</label>
+                        <input class="checkbox" type="checkbox" id="readCheckbox">
+                    </div>
+                    <button class="submitModal" id="submitModal" type="submit">Add</button>
+                </form>
+            </dialog>
+        </div>
+
+        <div class="bookDisplay" id="bookDisplay"></div>
+    </div>
+
+    <footer id="footer">
+        <p> Made by Lyarc79
+            <a href="https://github.com/Lyarc79" target="_blank">
+                <i id="github-logo" class="fa-brands fa-github"></i>
+            </a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
