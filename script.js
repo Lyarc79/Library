@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
         Library.clearForm();
     });
 
-   
     submitBtn.addEventListener('click', (e) => {
         e.preventDefault();
         const title = document.getElementById("title").value;
